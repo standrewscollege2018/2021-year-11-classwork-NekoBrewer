@@ -3,4 +3,8 @@
 
 name = input("What is your name?")
 
-print("Hello", name, "how are you?")
+print("Hello", name)
+
+mood = input("how are you")
+print("you are", mood, "that's good")
+
