@@ -6,5 +6,10 @@ name = input("What is your name?")
 print("Hello", name)
 
 mood = input("how are you")
-print("you are", mood, "that's good")
+
+print("that's great that you are", mood,)
+
+age = input("how old are you")
+
+print("you are",age , "that's cool")
 
