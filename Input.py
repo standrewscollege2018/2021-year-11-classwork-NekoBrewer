@@ -1,15 +1,14 @@
 # This program enables the user to enter their name
 # The program then greets them by name
 
-name = input("What is your name?")
+name = input("What is your name?  ")
 
 print("Hello", name)
 
-mood = input("how are you")
+mood = input("how are you   ")
 
-print("that's great that you are", mood,)
+print("that's great that you are   ", mood,)
 
-age = input("how old are you")
+age = input("how old are you   ")
 
-print("you are",age , "that's cool")
-
+print("wow I can't believe you're" ,age , "that's cool   ")
