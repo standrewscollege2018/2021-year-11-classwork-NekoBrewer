@@ -2,8 +2,14 @@
 keep_thinking = True
 keep_asking = True
 highest_bid = 0
-Auction_Item = input("What is the item being auctioned? ")
-
+get_item = True
+get
+while get_item == True:
+    Auction_Item = input("What is the item being auctioned? ")
+    if Auction_Item.replace(" ", "") == "":
+        print("Please enter an item")
+    else:
+        get_item = False
 
 check_reserve = True
 while check_reserve == True:
@@ -15,7 +21,7 @@ while check_reserve == True:
 while keep_thinking == True:
     if reserve_price < 0:
         reserve_checking = True
-        while reserve_ckecking == True:
+        while reserve_checking == True:
             try:
                 reserve_price = int(input("Please enter a higher reserve price ($) "))
                 reserve_checking = False
@@ -28,7 +34,15 @@ print("The auction for the", Auction_Item, "has started")
 print("The reserve price is $", highest_bid)
 
 while keep_asking == True:
-    name = input("What is your name? ")
+
+    while get_name == True:
+        name = input("What is your first name? ")
+        if name.replace(" ", "") == "":
+            print("Please enter an name")
+    else:
+        get_item = False
+
+
     bid_checking = True
     while bid_checking == True:
         try:
@@ -43,4 +57,4 @@ while keep_asking == True:
         print("Highest bid so far is",name,"with $",highest_bid)
     if bid <= -1:
         keep_asking = False
-print("The auction for the", Auction_Item, "finished with a bid of $",highest_bid)
+print("The auction for the", Auction_Item, "finished with a bid of $",highest_bid, "from", name)
