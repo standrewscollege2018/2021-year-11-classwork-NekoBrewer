@@ -1,10 +1,13 @@
 #makes the number between one and 10 and you must guess it
 high_score = 10000
+ask_number = True
 import random
 NUM = random.randint(1,100)
 keep_asking = True
 #set the counter
 counter = 0
+
+
 while keep_asking == True:
     counter += 1
     ask_number = True
