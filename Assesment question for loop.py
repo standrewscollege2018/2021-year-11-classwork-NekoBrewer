@@ -27,14 +27,12 @@ answers = [
 
 
 for i in range(len(question_prompts)):
-    question = input(question_promts[i])
+    question = input(question_prompts[i])
     if question.lower() == answers[i]:
         print("Correct!")
-        score +=1
+        score += 1
     else:
         print("Incorrect! The possible answers are", answers[i])
-
-
 
 
 
