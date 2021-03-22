@@ -4,6 +4,7 @@ keep_asking_yes_no = True
 keep_asking_prediction = True
 keep_asking_prediction_number = True
 keep_asking_name = True
+turns = 0
 
 
 question_prompts = [
@@ -17,12 +18,12 @@ question_prompts = [
 
 
 answers = [
-["c", "8848m", "8848", "8.848km"],
+["c" or "8848m" or "8848" or "8.848km"],
 ["a", "canberra"],
 ["d", "vietnam"],
 ["c", "ottawa"],
 ["b", "turkey"],
-["d", "asia"]
+["d", "asia"],
 ]
 
 
@@ -33,7 +34,8 @@ for i in range(len(question_prompts)):
         score += 1
     else:
         print("Incorrect! The possible answers are", answers[i])
-
+    turns += 1
+    print("Score =", score,"out of", turns)
 
 
 
