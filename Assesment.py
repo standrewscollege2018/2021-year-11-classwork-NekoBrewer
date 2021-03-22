@@ -17,12 +17,12 @@ question_prompts = [
 ]
 
 answers = [
-["c, 8848m, 8848)"],
-["a, canberra)"],
-["d, vietnam)"],
-["c, ottawa)"],
-["b, turkey)"],
-["d, asia)"]
+["c", "8848m", "8848", "8.848km"],
+["a", "canberra"],
+["d", "vietnam"],
+["c", "ottawa"],
+["b", "turkey"],
+["d", "asia"]
 ]
 
 
@@ -38,7 +38,7 @@ while keep_asking_name == True:
         keep_asking_name = False
 
 
-print("Welcome", name)
+print("Welcome {}".format(name))
 
 print("There will be 6 multi answer questions in this quiz")
 
@@ -132,7 +132,13 @@ else:
 
 
 
-
+for i in range(len(question_prompts)):
+    question = input(question_prompts[i])
+    if question.lower() == answers[i]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrect! The possible answers are", answers[i])
 
 #This is the end of the code where the total score will be calculated
 #The code will also say if they got more, less or the same amount of questions they thought they would get correct
