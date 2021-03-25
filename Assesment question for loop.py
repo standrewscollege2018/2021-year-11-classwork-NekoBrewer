@@ -18,25 +18,24 @@ question_prompts = [
 
 
 answers = [
-["c" or "8848m" or "8848" or "8.848km"],
-["a", "canberra"],
-["d", "vietnam"],
-["c", "ottawa"],
-["b", "turkey"],
-["d", "asia"],
+['c', '8848m', '8848', '8.848km'],
+['a', 'canberra'],
+['d', 'vietnam'],
+['c', 'ttawa'],
+['b', 'turkey'],
+['d', 'asia'],
 ]
 
 
 for i in range(len(question_prompts)):
     question = input(question_prompts[i])
-    if question.lower() == answers[i]:
+    if question.lower() in answers[i]:
         print("Correct!")
         score += 1
     else:
         print("Incorrect! The possible answers are", answers[i])
     turns += 1
     print("Score =", score,"out of", turns)
-
 
 
 
