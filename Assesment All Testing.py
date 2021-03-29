@@ -36,17 +36,26 @@ keep_asking_for_loop = True
 
 
 
-'''Asks the user to predict how many questions they think they'll get correct but will ask for an
-integer between 0 and 6 if they enter a number below zero, above 6, a decimal or string'''
-while keep_asking_prediction_number == True:
-    try:
-        prediction = int(input("Please enter how many questions you think you will get correct out of six: "))
-        if prediction >= 0 and prediction <= 6:
-            keep_asking_prediction_number = False
+'''The question is asked along with the answer options and you enter your answer and if it's correct
+your score goes up by one and it tells you how many questions you've got correct out of the amount answered.
+But if you get the question wrong it will tell you that you got it wrong and the possible answers that you
+could have entered as well as your score and if you jsut click enter or the space bar however many time
+and then enter it will tell you to enter an answer'''
+for i in range(len(question_prompts)):
+    keep_asking_for_loop = True
+    while keep_asking_for_loop == True:
+        question = input(question_prompts[i])
+        if question.replace (" ","") == "":
+            print("Please enter an answer")
         else:
-            print("Please enter an integer between 0 and 6")
-    except:
-        print("Please enter an integer between 0 and 6")
+            keep_asking_for_loop = False
+    questions_asked += 1
+    if question.lower() in answers[i]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrect! The possible answers are", answers[i])
+    print("Score = {} out of {}".format(score,questions_asked))
 
 
 
